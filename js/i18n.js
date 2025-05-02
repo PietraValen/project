@@ -1,6 +1,9 @@
 // Internationalization
 document.addEventListener('DOMContentLoaded', () => {
-    // Language translations
+
+    const languageButtons = document.querySelectorAll('.language-selector button');
+    const i18nElements = document.querySelectorAll('[data-i18n]');
+
     const translations = {
         'pt-BR': {
             'nav.home': 'Início',
@@ -53,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'footer.social': 'Social',
             'footer.rights': 'Todos os direitos reservados.'
         },
-        'en': {
+        'en-US': {
             'nav.home': 'Home',
             'nav.about': 'About',
             'nav.skills': 'Skills',
@@ -104,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'footer.social': 'Social',
             'footer.rights': 'All rights reserved.'
         },
-        'es': {
+        'es-ES': {
             'nav.home': 'Inicio',
             'nav.about': 'Sobre',
             'nav.skills': 'Habilidades',
@@ -157,48 +160,42 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
     
-    // Get language buttons and elements to translate
-    const languageButtons = document.querySelectorAll('.language-selector button');
-    const i18nElements = document.querySelectorAll('[data-i18n]');
-    
-    // Get current language from local storage or default to Portuguese
     let currentLang = localStorage.getItem('language') || 'pt-BR';
-    
-    // Translate the page based on the selected language
+
     const translatePage = (lang) => {
-        // Update active language button
+        // Atualiza os botões ativos
         languageButtons.forEach(button => {
-            if (button.getAttribute('data-lang') === lang) {
+            const buttonLang = button.getAttribute('data-lang');
+            if (buttonLang === lang) {
                 button.classList.add('active');
             } else {
                 button.classList.remove('active');
             }
         });
-        
-        // Update HTML lang attribute
+
+        // Define o atributo lang no HTML
         document.documentElement.setAttribute('lang', lang);
-        
-        // Translate each element with data-i18n attribute
+
+        // Tradução dos elementos
         i18nElements.forEach(element => {
             const key = element.getAttribute('data-i18n');
-            if (translations[lang] && translations[lang][key]) {
-                element.textContent = translations[lang][key];
+            const translation = translations[lang] && translations[lang][key];
+            if (translation) {
+                element.textContent = translation;
             }
         });
-        
-        // Save the language preference
+
         localStorage.setItem('language', lang);
         currentLang = lang;
     };
-    
-    // Add click event listeners to language buttons
+
     languageButtons.forEach(button => {
         button.addEventListener('click', () => {
-            const lang = button.getAttribute('data-lang');
-            translatePage(lang);
+            const selectedLang = button.getAttribute('data-lang');
+            translatePage(selectedLang);
         });
     });
-    
-    // Initial translation
+
+    // Tradução inicial
     translatePage(currentLang);
 });
