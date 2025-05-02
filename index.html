@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pietra | Desenvolvedora Full-Stack</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#home">Portfólio</a>
+            </div>
+            <div class="nav-controls">
+                <div class="language-selector">
+                    <button class="active" data-lang="pt-BR">PT</button>
+                    <button data-lang="en">EN</button>
+                    <button data-lang="es">ES</button>
+                </div>
+                <button class="theme-toggle" aria-label="Alternar tema">
+                    <span class="sun-icon">☀️</span>
+                    <span class="moon-icon">🌙</span>
+                </button>
+                <button class="menu-toggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" data-i18n="nav.home">Início</a></li>
+                <li><a href="#about" data-i18n="nav.about">Sobre</a></li>
+                <li><a href="#skills" data-i18n="nav.skills">Habilidades</a></li>
+                <li><a href="#projects" data-i18n="nav.projects">Projetos</a></li>
+                <li><a href="#testimonials" data-i18n="nav.testimonials">Depoimentos</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="title">
+                        <span class="greeting" data-i18n="hero.greeting">Olá, eu sou</span>
+                        <span class="name">Pietra Valentina</span>
+                    </h1>
+                    <h2 class="subtitle" data-i18n="hero.title">Desenvolvedora Full-Stack</h2>
+                    <p class="description" data-i18n="hero.description">Transformando ideias em experiências digitais interativas e acessíveis com código limpo e design responsivo.</p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn primary" data-i18n="hero.cta.projects">Ver Projetos</a>
+                        <a href="#contact" class="btn secondary" data-i18n="hero.cta.contact">Entrar em Contato</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="blob"></div>
+                    <img src="./assets/Pietra.jpg" alt="Pietra Valentina" class="profile-img">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title" data-i18n="about.title">Sobre Mim</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="./assets/Pietra.jpg" alt="Pietra Valentina trabalhando" class="profile-img">
+                    </div>
+                    <div class="about-text">
+                        <p data-i18n="about.p1">Sou uma desenvolvedora full-stack apaixonada por criar soluções digitais elegantes e funcionais. Com experiência em desenvolvimento front-end e back-end, estou comprometida em construir aplicações web que não apenas atendam às necessidades dos usuários, mas também proporcionem experiências memoráveis.</p>
+                        <p data-i18n="about.p2">Minha jornada no mundo da programação começou há 5 anos, e desde então venho aprimorando minhas habilidades e conhecimentos para acompanhar as últimas tendências e tecnologias do mercado.</p>
+                        <p data-i18n="about.p3">Quando não estou codificando, gosto de explorar novas tecnologias, contribuir para projetos open-source e compartilhar conhecimentos com a comunidade de desenvolvedores.</p>
+                        <div class="about-details">
+                            <div class="detail">
+                                <h3 data-i18n="about.education">Educação</h3>
+                                <p data-i18n="about.education.details">Bacharelado em Ciência da Computação - Universidade Paulista</p>
+                            </div>
+                            <div class="detail">
+                                <h3 data-i18n="about.experience">Experiência</h3>
+                                <p data-i18n="about.experience.details">2+ anos em desenvolvimento web com diversos tipos de projetos diferentes e sempre buscando as melhores soluções</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title" data-i18n="skills.title">Habilidades</h2>
+                <div class="skills-categories">
+                    <div class="category">
+                        <h3 data-i18n="skills.frontend">Front-end</h3>
+                        <ul class="skills-list">
+                            <li>
+                                <span class="skill-name">HTML5</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skill-name">CSS3</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skill-name">JavaScript</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skill-name">React</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="category">
+                        <h3 data-i18n="skills.backend">Back-end</h3>
+                        <ul class="skills-list">
+                            <li>
+                                <span class="skill-name">Node.js</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skill-name">Python</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skill-name">SQL</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skill-name">MongoDB</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 70%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="category">
+                        <h3 data-i18n="skills.tools">Ferramentas</h3>
+                        <ul class="skills-list">
+                            <li>
+                                <span class="skill-name">Git</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skill-name">Docker</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skill-name">AWS</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 65%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="skill-name">CI/CD</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 70%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title" data-i18n="projects.title">Projetos</h2>
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all" data-i18n="projects.filter.all">Todos</button>
+                    <button class="filter-btn" data-filter="web" data-i18n="projects.filter.web">Web</button>
+                    <button class="filter-btn" data-filter="mobile" data-i18n="projects.filter.mobile">Mobile</button>
+                    <button class="filter-btn" data-filter="design" data-i18n="projects.filter.design">Design</button>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="https://images.pexels.com/photos/5474295/pexels-photo-5474295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="E-commerce Website">
+                            <div class="project-links">
+                                <a href="#" class="btn-icon" aria-label="Ver demo">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="#" class="btn-icon" aria-label="Ver código">
+                                    <i class="fas fa-code"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>E-commerce Responsivo</h3>
+                            <p>Uma plataforma completa de e-commerce com carrinho de compras, pagamentos e painel administrativo.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="mobile">
+                        <div class="project-image">
+                            <img src="https://images.pexels.com/photos/13861/IMG_3496bfree.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Fitness App">
+                            <div class="project-links">
+                                <a href="#" class="btn-icon" aria-label="Ver demo">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="#" class="btn-icon" aria-label="Ver código">
+                                    <i class="fas fa-code"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Aplicativo Fitness</h3>
+                            <p>Aplicativo móvel para acompanhamento de treinos, nutrição e métricas de saúde.</p>
+                            <div class="project-tags">
+                                <span>React Native</span>
+                                <span>Firebase</span>
+                                <span>GraphQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="design">
+                        <div class="project-image">
+                            <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Design System">
+                            <div class="project-links">
+                                <a href="#" class="btn-icon" aria-label="Ver demo">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="#" class="btn-icon" aria-label="Ver código">
+                                    <i class="fas fa-code"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Sistema de Design</h3>
+                            <p>Um sistema de design completo com componentes reutilizáveis e documentação abrangente.</p>
+                            <div class="project-tags">
+                                <span>Storybook</span>
+                                <span>SASS</span>
+                                <span>TypeScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-category="web">
+                        <div class="project-image">
+                            <img src="https://images.pexels.com/photos/7103/writing-notes-idea-conference.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Task Manager">
+                            <div class="project-links">
+                                <a href="#" class="btn-icon" aria-label="Ver demo">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <a href="#" class="btn-icon" aria-label="Ver código">
+                                    <i class="fas fa-code"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Gerenciador de Tarefas</h3>
+                            <p>Aplicação web para gerenciamento de tarefas com colaboração em tempo real e integrações.</p>
+                            <div class="project-tags">
+                                <span>Vue.js</span>
+                                <span>Express</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-more">
+                    <a href="#" class="btn secondary" data-i18n="projects.viewMore">Ver Mais Projetos</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2 class="section-title" data-i18n="testimonials.title">Depoimentos</h2>
+                <div class="testimonials-slider">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Pietra é uma desenvolvedora excepcional que entendeu perfeitamente nossa visão e entregou um produto que superou todas as nossas expectativas. Sua capacidade de resolver problemas e atenção aos detalhes são impressionantes."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Carlos Mendes">
+                            <div class="author-info">
+                                <h3>Carlos Mendes</h3>
+                                <p>CEO, TechInova</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Trabalhar com Pietra foi uma experiência incrível. Ela não só possui habilidades técnicas excepcionais, mas também é uma excelente comunicadora. Recomendo fortemente seus serviços."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Mariana Santos">
+                            <div class="author-info">
+                                <h3>Mariana Santos</h3>
+                                <p>Diretora de Produto, Nexus Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Pietra transformou nossa ideia em uma aplicação web impressionante que recebeu elogios de nossos clientes. Sua compreensão de UX/UI e desenvolvimento full-stack é realmente notável."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Roberto Alves">
+                            <div class="author-info">
+                                <h3>Roberto Alves</h3>
+                                <p>Fundador, EcoTech Startups</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="testimonial-prev" aria-label="Anterior">❮</button>
+                    <div class="testimonial-dots">
+                        <button class="dot active" aria-label="Slide 1"></button>
+                        <button class="dot" aria-label="Slide 2"></button>
+                        <button class="dot" aria-label="Slide 3"></button>
+                    </div>
+                    <button class="testimonial-next" aria-label="Próximo">❯</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title" data-i18n="contact.title">Contato</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3 data-i18n="contact.getInTouch">Vamos conversar</h3>
+                        <p data-i18n="contact.description">Estou sempre aberta a discutir novos projetos, oportunidades criativas ou possibilidades de parceria.</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <span class="icon">📧</span>
+                                <p><a href="pietravalentinaFH@outlook.com">Email</a></p>
+                            </div>
+                            <div class="contact-item">
+                                <span class="icon">📱</span>
+                                <p><a href="https://w.app/61lzwi">Whatsapp</a></p>
+                            </div>
+                            <div class="contact-item">
+                                <span class="icon">📍</span>
+                                <p>São Paulo, Brasil</p>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" aria-label="Dribbble">
+                                <i class="fab fa-dribbble"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name" data-i18n="contact.form.name">Nome</label>
+                                <input type="text" id="name" name="name" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" data-i18n="contact.form.email">Email</label>
+                                <input type="email" id="email" name="email" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject" data-i18n="contact.form.subject">Assunto</label>
+                                <input type="text" id="subject" name="subject" required aria-required="true">
+                            </div>
+                            <div class="form-group">
+                                <label for="message" data-i18n="contact.form.message">Mensagem</label>
+                                <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                            </div>
+                            <button type="submit" class="btn primary" data-i18n="contact.form.submit">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#home">Pietra Valentina F. Himmelsbach</a>
+                    <p data-i18n="footer.description">Desenvolvedora Full-Stack focada em criar experiências digitais excepcionais.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3 data-i18n="footer.navigation">Navegação</h3>
+                        <ul>
+                            <li><a href="#home" data-i18n="nav.home">Início</a></li>
+                            <li><a href="#about" data-i18n="nav.about">Sobre</a></li>
+                            <li><a href="#skills" data-i18n="nav.skills">Habilidades</a></li>
+                            <li><a href="#projects" data-i18n="nav.projects">Projetos</a></li>
+                            <li><a href="#testimonials" data-i18n="nav.testimonials">Depoimentos</a></li>
+                            <li><a href="#contact" data-i18n="nav.contact">Contato</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3 data-i18n="footer.social">Social</h3>
+                        <ul>
+                            <li><a href="#">GitHub</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Dribbble</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pietra Valentina F. Himmelsbach. <span data-i18n="footer.rights">Todos os direitos reservados.</span></p>
+                <div class="language-selector">
+                    <button class="active" data-lang="pt-BR">PT</button>
+                    <button data-lang="en">EN</button>
+                    <button data-lang="es">ES</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/i18n.js"></script>
+</body>
+</html>
